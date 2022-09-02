@@ -1,0 +1,28 @@
+{% load static %}
+<section id="header-section">
+    <div>
+        <header id="header" class="masterhead text-white text-center">
+            <div class="smalllogo">
+                <a href="#welcome-section" class="logolink">
+                    <h2>Bruna Mello</h2>
+                </a>
+            </div>
+            <button class="nav-toggle">
+                <span class="hamburger"></span>
+            </button>
+            {% include 'Django/Navbar.html' %}
+            <div class="container-fluid div-header">
+                <img class="img-fluid d-block mx-auto mb-5" id="profile-img" src="{% static 'blog/images/profile-min.png' %}" alt="Profile"/>
+                <h1 class="no-hover">Bruna Mello</h1>
+                <hr class="star-light">
+                <h2 class="mb-0 no-hover">Junior Developer</h2>
+                <img src="{% static 'blog/images/icons/java-white.png' %}" alt="img" class="icons-img"/>
+                <img src="{% static 'blog/images/icons/js-white.png' %}" alt="img" class="icons-img"/>
+                <img src="{% static 'blog/images/icons/python-white.png' %}" alt="img" class="icons-img"/>
+                <img src="{% static 'blog/images/icons/sql-white.png' %}" alt="img" class="icons-img"/>
+                <img src="{% static 'blog/images/icons/react-white.png' %}" alt="img" class="icons-img"/>
+                <br/>
+            </div>
+        </header>
+    </div>
+</section>
