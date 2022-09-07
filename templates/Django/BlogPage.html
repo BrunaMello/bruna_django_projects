@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {% include 'Django/head.html' %}
+</head>
+<body>
+{#    Navbar#}
+{% include 'Django/navbar.html' %}
+<main class="container">
+    <!-- Page Header-->
+    {% include 'Django/BlogHeaderPage.html' %}
+
+    <!-- Main Content-->
+    {% include 'Django/BlogFrontPostPage.html' %}
+    {% include 'Django/BlogPagination.html' %}
+
+
+</main>
+<!-- Footer-->
+{% include 'Django/Footer.html' %}
+{% include 'Django/JavaScript.html' %}
+</body>
+</html>

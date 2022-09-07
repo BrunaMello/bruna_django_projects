@@ -1,9 +1,22 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from datetime import date
 
 
 def index(request):
-    dic_context = {'msnegrito': "Testando negrito"}
-    return render(request, 'Django/index.html', dic_context)
+    return render(request, 'Django/index.html')
+
+
+def blog(request):
+    return render(request, 'Django/BlogPage.html')
+
+
+def post(request):
+    return render(request, 'Django/BlogPost.html')
+
+
+
+
+
 
 

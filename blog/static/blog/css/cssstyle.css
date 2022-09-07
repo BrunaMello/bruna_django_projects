@@ -1,0 +1,252 @@
+/*Color*/
+:root {
+    --green: #264553;
+    --lighgreen: #2a9d8f;
+    --yellow: #e9c46a;
+    --lightorange: #f4a261;
+    --orange: #e76f51;
+    --white: #fefae0;
+    --black: #31393c;
+
+}
+
+/*Container*/
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/*Fonts*/
+
+h1 {
+    font-family: 'MontSerrat', sans-serif;
+    font-weight: 400;
+}
+
+h1:hover {
+    color: #fefae0;
+}
+
+h2 {
+    font-family: 'MontSerrat', sans-serif;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: 'MontSerrat', sans-serif;
+    font-weight: 200;
+}
+
+h4, h5, p {
+    font-family: 'MontSerrat', sans-serif;
+    font-weight: 100;
+}
+
+a {
+    text-decoration: none;
+    color:  #31393c;
+}
+
+.no-hover {
+    pointer-events: none;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+/*Footer*/
+
+#footer {
+    background-color: #f4a261;
+    color: rgba(38, 69, 83, 75%);
+}
+
+/*Contact*/
+
+#contact {
+    background-color: #264553;
+}
+
+
+.contact-info {
+    color: white;
+    font-family: "MontSerrat", sans-serif;
+}
+
+.contact-info:hover {
+    color: #e76f51;
+}
+
+/*Portfolio*/
+
+#portfolio {
+    background-color: #fefae0;
+
+}
+
+.cards {
+    display: grid;
+    grid-column: 1;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 1rem;
+    perspective: 1000px;
+}
+
+.framework-card {
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.framework-card:hover {
+    transform: rotateX(-20deg);
+}
+
+.framework-card img {
+    height: 80px;
+    width: 100%;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+/*Courses*/
+#courses {
+    background-color: #264553 ;
+}
+
+
+/*University*/
+#university {
+    background-color: #fefae0;
+}
+
+/*Header*/
+#header {
+    background-color: #264553;
+    padding-top: 100px;
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+.icons-img {
+    padding: 10px;
+}
+
+
+.d-block {
+    display: block !important;
+}
+
+#profile-img {
+    height: 350px;
+    width: 300px;
+    border-radius: 50%;
+    border: 6px solid ghostwhite;
+}
+
+/*NavBar*/
+#navbar {
+    background-color: #f4a261;
+}
+
+.nav {
+    /*height: 5rem;*/
+    width: 100%;
+    display: block;
+    /*justify-content: flex-start;*/
+    /*z-index: 10;*/
+    /*font-weight: 300;*/
+    /*transition: 0.2s ease-in-out;*/
+    position: fixed;
+}
+
+.nav_list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    /*margin-left: 55vh;*/
+    margin-top: -49px;
+    padding: 0vh 1vw;
+}
+
+.nav_link {
+    /*color: inherit;*/
+    /*text-decoration: none;*/
+    /*margin-right: 50px;*/
+    position: relative;
+    font-family: "MontSerrat", sans-serif;
+    padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    font-weight: 400;
+    transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+    color: #264553;
+}
+
+.nav_link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color:  #264553;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s, transform 0.2s ease-out;
+}
+
+.nav_link:active:before {
+    background-color:  #264553;
+}
+
+.nav_link:hover:before,
+.nav_link:focus:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+
+/*Logo NavBar*/
+
+.logo {
+    padding: 2vh 1vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color:  #264553;
+    text-transform: uppercase;
+    width: 30rem;
+    font-family: "MontSerrat", sans-serif;
+    font-weight: 500;
+}
+
+.nav_link:hover,
+.logo:hover {
+    color: #264553;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+/*BlogHeader*/
+
+#blog-header {
+    padding-top: 100px;
+}
+
+.blog-pagination {
+    padding-bottom: 20px;
+}
+
+
