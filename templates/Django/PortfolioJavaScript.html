@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+    <html lang="en">
+    <head>
+        {% include 'Django/head.html' %}
+    </head>
+    {% include 'Django/Navbar.html' %}
+
+    <body>
+    <header class="masthead">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h3 class=" site-heading my-4 mt-3 text-white"> Welcome to my awesome Blog </h3>
+                        <p class="text-light">We Love Django As much as you do..! &nbsp
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container shadow-sm">
+        <div class="row rounded text-bg-dark">
+            <div class="col-md-10 mx-auto">
+                <h1 class="display-4 fst-italic text-center">Java Script Projects</h1>
+                <p class="lead my-3 text-center">Multiple lines of text that form the lede, informing new readers
+                    quickly and
+                    efficiently about what’s most interesting in this post’s contents.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-3 center">
+                {% for project in project_list %}
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ project.title }}</h2>
+                            <a href="{{ project.github }}"><strong class="d-inline-block mb-2 text-success">{{ project.github }}</strong></a>
+                            <p class="card-text">{{ project.description|slice:":200" }}</p>
+                            <a href="{% url 'portfolio:portfolio_detail' project.slug %}" class="btn">Continue Reading
+                                &rarr;</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </body>
+    {% include 'Django/Footer.html' %}
+
+{% endblock %}
