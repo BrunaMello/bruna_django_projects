@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog',
     'fontawesomefree',
     'portfolio',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
