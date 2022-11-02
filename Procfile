@@ -1,0 +1,1 @@
+web: gunicorn bruna_django_projects.wsgi --log-file -
