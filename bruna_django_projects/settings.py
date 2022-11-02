@@ -78,7 +78,8 @@ TEMPLATES = [
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
 
-TEMPLATES_DIRS = (TEMPLATE_PATH, )
+TEMPLATES_DIRS = (os.path.join(BASE_DIR, '../templates'), )
+
 
 WSGI_APPLICATION = 'bruna_django_projects.wsgi.application'
 
