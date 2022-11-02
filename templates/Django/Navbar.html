@@ -3,7 +3,7 @@
 <div>
     <nav id="navbar" class="nav fixed-top">
         <div class="logo">
-            <a href="#logo-section" id="logo">
+            <a href="{% url 'blog:index' %}" id="logo">
                 <h1>Bruna Mello</h1>
             </a>
         </div>
@@ -18,7 +18,7 @@
                 <a href="#couses" class="nav_link" id="home">Courses</a>
             </li>
             <li class="nav_item">
-                <a href="#portfolio" class="nav_link" id="home">Portfolio</a>
+                <a href="{% url 'portfolio:JavaScriptPortfolio' %}" class="nav_link" id="home">Portfolio</a>
             </li>
             <li class="nav_item">
                 <a href="#contact" class="nav_link" id="home">Contact</a>
