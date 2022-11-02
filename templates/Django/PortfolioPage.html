@@ -20,15 +20,10 @@
     <div class="container shadow-sm" style="padding-top: 10px">
         <div class="row rounded text-bg-dark">
             <div class="col-md-10 mx-auto">
-{#                {% for project in project_list %}#}
-{#                    {% for id, name in project.technology %}#}
                         <h1 class="display-4 fst-italic text-center">Projects</h1>
                         <p class="lead my-3 text-center">Projects made for programming studies or for college
                             assignments</p>
-{#                    {% endfor %}#}
-{#                {% endfor %}#}
             </div>
-
         </div>
     </div>
     <div class="container">
@@ -38,11 +33,10 @@
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
                             <h2 class="card-title">{{ project.title }}</h2>
-                            <a href="{{ project.github }}"><strong
-                                    class="d-inline-block mb-2 text-success">{{ project.github }}</strong></a>
+                            <div><a class="d-inline-block mb-4 text-success" href="{{ project.github }}"><strong>{{ project.github }}</strong></a></div>
                             <div>{{ project.summary }}</div>
-                            <button href="{% url 'portfolio:portfolio_detail' project.slug %}" class="btn ">Read More
-                            </button>
+{#                            <button href="{% url 'portfolio:portfolio_detail' project.slug %}" class="btn ">Read More#}
+{#                            </button>#}
                         </div>
                     </div>
                 </div>

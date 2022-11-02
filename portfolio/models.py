@@ -1,20 +1,24 @@
+import datetime
+
 from django.db import models
-from django.utils.timezone import now
 from tinymce.models import HTMLField
+from datetime import datetime
 
 # Create your models here.
 
-TECHNOLOGY = (
-    (0, "JavaScript"),
-    (1, "Java"),
-    (2, "Python"),
-    (3, "Android"),
-    (4, "Apple"),
-    (5, "Other")
-)
-
 
 class Project(models.Model):
+    TECHNOLOGY = (
+        (0, "JavaScript"),
+        (1, "Java"),
+        (2, "Python"),
+        (3, "Android"),
+        (4, "Apple"),
+        (5, "Other")
+    )
+
+    now = datetime.now()
+
     project_id = models.BigAutoField(primary_key=True)
     slug = models.SlugField(max_length=200, unique=True)
     title = models.CharField(max_length=200, unique=True)
@@ -30,3 +34,6 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+    def technology_verbose(self):
+        return dict(Project.TECHNOLOGY)[self.technology]
