@@ -58,6 +58,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bruna_django_projects.urls'
 
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+
+TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -73,11 +77,6 @@ TEMPLATES = [
         },
     },
 ]
-
-TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
-
-
-TEMPLATES_DIRS = "templates"
 
 
 WSGI_APPLICATION = 'bruna_django_projects.wsgi.application'

@@ -30,24 +30,24 @@ class PortfolioPython(generic.ListView):
 class PortfolioAndroid(generic.ListView):
     model = Project
     queryset = Project.objects.filter(technology=3).order_by('-date_created')
-    template_name = 'Django/../templates/blog/PortfolioPage.html'
+    template_name = 'PortfolioPage.html'
     context_object_name = 'project_list'
 
 
 class PortfolioApple(generic.ListView):
     model = Project
     queryset = Project.objects.filter(technology=4).order_by('-date_created')
-    template_name = 'Django/../templates/blog/PortfolioPage.html'
+    template_name = 'PortfolioPage.html'
     context_object_name = 'project_list'
 
 
 class PortfolioOther(generic.ListView):
     model = Project
     queryset = Project.objects.filter(technology=5).order_by('-date_created')
-    template_name = 'Django/../templates/blog/PortfolioPage.html'
+    template_name = 'PortfolioPage.html'
     context_object_name = 'project_list'
 
 
 class PortfolioDetail(generic.DetailView):
     model = Project
-    template_name = 'Django/../templates/blog/PortfolioDetail.html'
+    template_name = 'PortfolioDetail.html'
