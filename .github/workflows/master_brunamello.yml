@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'brunamello'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3CAFE0C2DDEF4558A8D883D489955470 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D7032A721F1C487895BBCD900D18EECD }}
