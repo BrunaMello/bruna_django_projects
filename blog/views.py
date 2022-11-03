@@ -5,17 +5,17 @@ from .models import Post
 
 
 def index(request):
-    return render(request, 'Django/index.html')
+    return render(request, 'Django/../templates/blog/Index.html')
 
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('created_on')
-    template_name = 'Django/BlogPage.html'
+    template_name = 'Django/../templates/blog/BlogPage.html'
 
 
 class PostDetail(generic.DetailView):
     model = Post
-    template_name = 'Django/BlogPost.html'
+    template_name = 'Django/../templates/blog/BlogPost.html'
 
 
 
